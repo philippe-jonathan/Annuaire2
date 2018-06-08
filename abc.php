@@ -3,10 +3,8 @@
 
 <head>
 
-<h1>THE ANNUAIRE</h1>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -15,9 +13,20 @@
 
 </head>
 
+<nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo"><i class="material-icons">THE</i>ANNUAIRE</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html"><i class="material-icons">Acceuil</i></a></li>
+        <li><a href="badges.html"><i class="material-icons">Ajouter contact</i></a></li>
+        <li><a href="collapsible.html"><i class="material-icons">Supprimer contact</i></a></li>
+        <li><a href="mobile.html"><i class="material-icons"></i></a></li>
+      </ul>
+    </div>
+  </nav>
 
 <body>
-
+<table>
 <?php 
 
 try{
@@ -46,9 +55,11 @@ $email = $bdd->query('SELECT * FROM contacts WHERE email LIKE "%gmail.com"') ;
 
 while($donnees=$reponse->fetch()){
 
-      echo '<p>Nom user= ' . $donnees['nom'];
+      echo '<tr><td>Nom: ' . $donnees['nom'] . '<td>Prenom: ' . $donnees['prenom'] . '<td>Email: ' . $donnees['email'];
 
-}
+}?>
+</table>
+<?php
 
 while($result=$cpt->fetch()){
 
@@ -77,6 +88,6 @@ $del = $bdd->query('DELETE FROM contacts WHERE id =1')
 
  ?>
 
- 
+
 </body>
 </html>
