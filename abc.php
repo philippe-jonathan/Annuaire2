@@ -36,6 +36,8 @@ $reponse = $bdd->query('SELECT * FROM contacts') ;
 
 $cpt = $bdd->query('SELECT COUNT(*) AS nb_contacts FROM contacts') ;
 
+$ville = $bdd->query('SELECT * FROM contacts WHERE ville ="Auch" ') ;
+
 while($donnees=$reponse->fetch()){
 
       echo '<p>Nom user= ' . $donnees['nom'];
@@ -47,6 +49,14 @@ while($result=$cpt->fetch()){
       echo '<p>Nombre de contacts= ' . $result[0];
 
 }
+
+while($retour=$ville->fetch()){
+
+      echo '<p>contacts habitants à Auch= ' . $retour['nom'];
+}
+
+
+
 
  ?>
 
