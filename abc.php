@@ -66,6 +66,11 @@ while($retour_email=$email->fetch()){
 
 $up = $bdd->query('UPDATE contacts SET email = "ogatien@simplon.co" WHERE id = 18') ;
 
+$de = $bdd->query('DELETE FROM appartenir WHERE fk_contact = 1 ');
+
+$del = $bdd->query('DELETE FROM contacts WHERE id =1')
+;
+
  ?>
 
  
