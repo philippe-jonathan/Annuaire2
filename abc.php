@@ -9,7 +9,7 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="style.css">
 	
-	<title>THE ANNUAIRE</title>
+	<title>THE ANNUAIREe</title>
 
 </head>
 
