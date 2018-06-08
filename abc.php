@@ -64,6 +64,7 @@ while($retour_email=$email->fetch()){
      echo '<p> ' . $retour_email['nom'] ;
  }
 
+$up = $bdd->query('UPDATE contacts SET email = "ogatien@simplon.co" WHERE id = 18') ;
 
  ?>
 
